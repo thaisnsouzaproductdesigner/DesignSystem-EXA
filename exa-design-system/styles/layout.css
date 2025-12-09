@@ -1,0 +1,104 @@
+/* ========================================
+   LAYOUT TOKENS (Spacing, Sizing, Radius, Blur, Opacity)
+   ======================================== */
+:root {
+  /* SPACING */
+  --spacing-none: 0;
+  --spacing-1: 1px;
+  --spacing-2: 2px;
+  --spacing-3: 4px;
+  --spacing-4: 8px;
+  --spacing-5: 12px;
+  --spacing-6: 16px;
+  --spacing-7: 20px;
+  --spacing-8: 24px;
+  --spacing-9: 28px;
+  --spacing-10: 32px;
+  --spacing-11: 36px;
+  --spacing-12: 40px;
+  --spacing-13: 44px;
+  --spacing-14: 48px;
+  --spacing-15: 56px;
+  --spacing-16: 64px;
+  --spacing-17: 72px;
+  --spacing-18: 80px;
+  --spacing-19: 96px;
+  --spacing-20: 112px;
+  --spacing-21: 128px;
+  --spacing-22: 144px;
+  --spacing-23: 160px;
+  
+  /* SIZING */
+  /* Micro (Icons, indicators) */
+  --sizing-0: 0px;
+  --sizing-px: 1px;
+  --sizing-0-5: 2px;
+  --sizing-1: 4px;
+  --sizing-1-5: 6px;
+  --sizing-2: 8px;
+  --sizing-2-5: 10px;
+  --sizing-3: 12px;
+  --sizing-3-5: 14px;
+  --sizing-4: 16px;
+  --sizing-5: 20px;
+  --sizing-6: 24px;
+  --sizing-7: 28px;
+  --sizing-8: 32px;
+  --sizing-9: 36px;
+  --sizing-10: 40px;
+  --sizing-11: 44px;
+  --sizing-12: 48px;
+  --sizing-13: 52px;
+  --sizing-14: 56px;
+  --sizing-15: 60px;
+  --sizing-16: 64px;
+  --sizing-20: 80px;
+  --sizing-24: 96px;
+  --sizing-32: 128px;
+  --sizing-40: 160px;
+  --sizing-48: 192px;
+  --sizing-56: 224px;
+  --sizing-64: 256px;
+  --sizing-80: 320px;
+  
+  /* Macro (Containers, Layouts) */
+  --sizing-xs: 320px;
+  --sizing-sm: 384px;
+  --sizing-md: 448px;
+  --sizing-lg: 512px;
+  --sizing-xl: 576px;
+  --sizing-2xl: 672px;
+  --sizing-3xl: 768px;
+  --sizing-4xl: 896px;
+  --sizing-5xl: 1024px;
+  --sizing-6xl: 1152px;
+  --sizing-7xl: 1280px;
+  
+  /* BORDER RADIUS */
+  --border-radius-none: 0;
+  --border-radius-2xs: 1px;
+  --border-radius-xs: 2px;
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 12px;
+  --border-radius-xl: 16px;
+  --border-radius-2xl: 20px;
+  --border-radius-full: 9999px;
+  
+  /* BLUR */
+  --blur-sm: 4px;
+  --blur-md: 8px;
+  --blur-lg: 12px;
+  
+  /* OPACITY */
+  --opacity-10: 0.1;
+  --opacity-20: 0.2;
+  --opacity-30: 0.3;
+  --opacity-40: 0.4;
+  --opacity-50: 0.5;
+  --opacity-60: 0.6;
+  --opacity-70: 0.7;
+  --opacity-80: 0.8;
+  --opacity-90: 0.9;
+  --opacity-100: 1;
+}

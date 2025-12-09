@@ -1,0 +1,219 @@
+/* ========================================
+   DARK MODE OVERRIDES
+   ======================================== */
+[data-theme="dark"], .dark {
+  /* Background Tokens - Dark Mode */
+  --bg-primary: var(--color-neutral-900);
+  --bg-secondary: var(--color-neutral-800);
+  --bg-tertiary: var(--color-neutral-700);
+  --bg-quaternary: var(--color-neutral-600);
+  --bg-primary-hover: var(--color-neutral-800);
+  --bg-secondary-hover: var(--color-neutral-700);
+  --bg-tertiary-hover: var(--color-neutral-600);
+  --bg-quaternary-hover: var(--color-neutral-500);
+  --bg-black-solid: var(--color-neutral-200);
+  --bg-black-solid-hover: var(--color-neutral-300);
+  --bg-disabled: var(--color-neutral-800);
+  --bg-disabled-alt: var(--color-neutral-700);
+  --bg-accent-primary: var(--color-brand-400); /* Mais claro no dark mode para melhor contraste */
+  --bg-accent-primary-hover: var(--color-brand-300);
+  --bg-accent-solid: var(--color-brand-500);
+  --bg-accent-solid-hover: var(--color-brand-400);
+  --bg-error-primary: var(--color-vermillion-500);
+  --bg-error-primary-hover: var(--color-vermillion-400);
+  --bg-error-secondary: var(--color-vermillion-900);
+  --bg-error-secondary-hover: var(--color-vermillion-800);
+  --bg-success-primary: var(--color-green-500);
+  --bg-success-primary-hover: var(--color-green-400);
+  --bg-success-secondary: var(--color-green-900);
+  --bg-success-secondary-hover: var(--color-green-800);
+  --bg-warning-primary: var(--color-yellow-500);
+  --bg-warning-primary-hover: var(--color-yellow-400);
+  --bg-warning-secondary: var(--color-yellow-900);
+  --bg-warning-secondary-hover: var(--color-yellow-800);
+  --bg-info-primary: var(--color-brand-500);
+  --bg-info-primary-hover: var(--color-brand-400);
+  --bg-info-secondary: var(--color-brand-900);
+  --bg-info-secondary-hover: var(--color-brand-800);
+  
+  /* Text Tokens - Dark Mode */
+  --text-on-brand: var(--color-brand-1000); /* Texto escuro para contraste com brand-400 */
+  --text-primary: var(--color-neutral-200);
+  --text-secondary: var(--color-neutral-400);
+  --text-tertiary: var(--color-neutral-600);
+  --text-primary-hover: var(--color-neutral-100);
+  --text-secondary-hover: var(--color-neutral-300);
+  --text-tertiary-hover: var(--color-neutral-500);
+  --text-disabled: var(--color-neutral-700);
+  --text-disabled-alt: var(--color-neutral-800);
+  --text-placeholder: var(--color-neutral-600);
+  --text-accent-primary: var(--color-brand-400);
+  --text-accent-secondary: var(--color-brand-300);
+  --text-accent-primary-hover: var(--color-brand-300);
+  --text-accent-secondary-hover: var(--color-brand-200);
+  --text-error-primary: var(--color-vermillion-400);
+  --text-error-secondary: var(--color-vermillion-300);
+  --text-error-primary-hover: var(--color-vermillion-300);
+  --text-error-secondary-hover: var(--color-vermillion-200);
+  --text-success-primary: var(--color-green-400);
+  --text-success-secondary: var(--color-green-300);
+  --text-success-primary-hover: var(--color-green-300);
+  --text-success-secondary-hover: var(--color-green-200);
+  --text-warning-primary: var(--color-yellow-400);
+  --text-warning-secondary: var(--color-yellow-300);
+  --text-warning-primary-hover: var(--color-yellow-300);
+  --text-warning-secondary-hover: var(--color-yellow-200);
+  --text-info-primary: var(--color-brand-400);
+  --text-info-secondary: var(--color-brand-300);
+  --text-info-primary-hover: var(--color-brand-300);
+  --text-info-secondary-hover: var(--color-brand-200);
+  
+  /* Icon Tokens - Dark Mode */
+  --icon-primary: var(--color-neutral-100);
+  --icon-secondary: var(--color-neutral-400);
+  --icon-tertiary: var(--color-neutral-500);
+  --icon-primary-hover: var(--color-neutral-200);
+  --icon-secondary-hover: var(--color-neutral-300);
+  --icon-tertiary-hover: var(--color-neutral-400);
+  --icon-disabled: var(--color-neutral-700);
+  --icon-disabled-alt: var(--color-neutral-800);
+  --icon-placeholder: var(--color-neutral-600);
+  --icon-accent-primary: var(--color-brand-400);
+  --icon-accent-secondary: var(--color-brand-300);
+  --icon-accent-primary-hover: var(--color-brand-300);
+  --icon-accent-secondary-hover: var(--color-brand-200);
+  --icon-error-primary: var(--color-vermillion-400);
+  --icon-error-secondary: var(--color-vermillion-300);
+  --icon-error-primary-hover: var(--color-vermillion-300);
+  --icon-error-secondary-hover: var(--color-vermillion-200);
+  --icon-success-primary: var(--color-green-400);
+  --icon-success-secondary: var(--color-green-300);
+  --icon-success-primary-hover: var(--color-green-300);
+  --icon-success-secondary-hover: var(--color-green-200);
+  --icon-warning-primary: var(--color-yellow-400);
+  --icon-warning-secondary: var(--color-yellow-300);
+  --icon-warning-primary-hover: var(--color-yellow-300);
+  --icon-warning-secondary-hover: var(--color-yellow-200);
+  --icon-info-primary: var(--color-brand-400);
+  --icon-info-secondary: var(--color-brand-300);
+  --icon-info-primary-hover: var(--color-brand-300);
+  --icon-info-secondary-hover: var(--color-brand-200);
+  
+  /* Border Tokens - Dark Mode */
+  --border-primary: var(--color-neutral-700);
+  --border-secondary: var(--color-neutral-800);
+  --border-tertiary: var(--color-neutral-900);
+  --border-primary-solid: var(--color-neutral-200);
+  --border-disabled: var(--color-neutral-800);
+  --border-disabled-alt: var(--color-neutral-900);
+  --border-accent-primary: var(--color-brand-400);
+  --border-accent-secondary: var(--color-brand-800);
+  --border-error-primary: var(--color-vermillion-400);
+  --border-error-secondary: var(--color-vermillion-800);
+  --border-success-primary: var(--color-green-400);
+  --border-success-secondary: var(--color-green-800);
+  --border-warning-primary: var(--color-yellow-400);
+  --border-warning-secondary: var(--color-yellow-800);
+  --border-info-primary: var(--color-brand-400);
+  --border-info-secondary: var(--color-brand-800);
+  
+  /* Surface & Container Tokens - Dark Mode */
+  --surface-primary: var(--color-neutral-900);
+  --surface-secondary: var(--color-neutral-800);
+  --surface-tertiary: var(--color-neutral-700);
+  --surface-elevated: var(--color-neutral-800);
+  --surface-elevated-hover: var(--color-neutral-700);
+  --surface-overlay: rgba(0, 0, 0, 0.7);
+  --surface-overlay-light: rgba(0, 0, 0, 0.5);
+  --surface-overlay-heavy: rgba(0, 0, 0, 0.85);
+  --surface-hover: var(--color-neutral-700);
+  --surface-active: var(--color-neutral-600);
+  --surface-selected: var(--color-brand-900);
+  --surface-selected-hover: var(--color-brand-800);
+  
+  /* Input & Form Control Tokens - Dark Mode */
+  --input-bg: var(--color-neutral-800);
+  --input-bg-hover: var(--color-neutral-700);
+  --input-bg-focus: var(--color-neutral-800);
+  --input-bg-disabled: var(--color-neutral-900);
+  --input-bg-readonly: var(--color-neutral-800);
+  --input-border: var(--color-neutral-600);
+  --input-border-hover: var(--color-neutral-500);
+  --input-border-focus: var(--color-brand-400);
+  --input-border-error: var(--color-vermillion-400);
+  --input-border-success: var(--color-green-400);
+  --input-border-disabled: var(--color-neutral-700);
+  --input-text: var(--color-neutral-100);
+  --input-text-placeholder: var(--color-neutral-600);
+  --input-text-disabled: var(--color-neutral-700);
+  --input-focus-ring: var(--color-brand-400);
+  --input-focus-ring-error: var(--color-vermillion-400);
+  --input-focus-ring-success: var(--color-green-400);
+  
+  /* Shadow Tokens - Dark Mode */
+  --shadow-card: 0 2px 4px rgba(0, 0, 0, 0.3), 0 0 2px rgba(0, 0, 0, 0.2);
+  --shadow-card-hover: 0 4px 8px rgba(0, 0, 0, 0.4), 0 1px 7px rgba(0, 0, 0, 0.3);
+  --shadow-dropdown: 0 9px 22px rgba(0, 0, 0, 0.5), 0 4px 18px rgba(0, 0, 0, 0.35);
+  --shadow-modal: 0 15px 35px rgba(0, 0, 0, 0.7), 0 6px 28px rgba(0, 0, 0, 0.5);
+  --shadow-popover: 0 7px 15px rgba(0, 0, 0, 0.4), 0 3px 12px rgba(0, 0, 0, 0.3);
+  --shadow-tooltip: 0 4px 8px rgba(0, 0, 0, 0.4), 0 1px 7px rgba(0, 0, 0, 0.3);
+  --shadow-elevated: 0 12px 29px rgba(0, 0, 0, 0.6), 0 5px 23px rgba(0, 0, 0, 0.4);
+  --shadow-floating: 0 18px 42px rgba(0, 0, 0, 0.8), 0 7px 34px rgba(0, 0, 0, 0.6);
+  
+  /* Documentation Tokens - Dark Mode */
+  --preview-bg-light: var(--color-neutral-100);
+  --preview-bg-dark: var(--color-neutral-800);
+  --preview-border-light: var(--color-neutral-200);
+  --preview-border-dark: var(--color-neutral-700);
+  --code-bg: var(--color-neutral-1000);
+  --code-text: var(--color-neutral-100);
+  --docs-header-bg: var(--color-neutral-900);
+  --docs-header-border: var(--color-neutral-700);
+  --docs-sidebar-bg: var(--color-neutral-900);
+  --docs-sidebar-border: var(--color-neutral-700);
+  --docs-sidebar-hover: var(--color-neutral-800);
+  --docs-sidebar-active: var(--color-brand-900);
+  
+  /* Focus States - Dark Mode */
+  --focus-ring: 0 0 0 3px var(--color-brand-800);
+  --focus-ring-error: 0 0 0 3px var(--color-vermillion-800);
+  --focus-ring-success: 0 0 0 3px var(--color-green-800);
+  --selection-bg: var(--color-brand-900);
+  --selection-text: var(--color-brand-100);
+  --drop-target-border: var(--color-brand-400);
+  --drop-target-bg: var(--color-brand-900);
+  
+  /* Skeleton Tokens - Dark Mode */
+  --skeleton-base: var(--color-neutral-700);
+  --skeleton-highlight: var(--color-neutral-600);
+  
+  /* Link Tokens - Dark Mode */
+  --link-default: var(--color-brand-400);
+  --link-default-hover: var(--color-brand-300);
+  --link-default-active: var(--color-brand-200);
+  --link-visited: var(--color-purple-400);
+  --link-visited-hover: var(--color-purple-300);
+  
+  /* Scrollbar Tokens - Dark Mode */
+  --scrollbar-track: var(--color-neutral-800);
+  --scrollbar-thumb: var(--color-neutral-600);
+  --scrollbar-thumb-hover: var(--color-neutral-500);
+  
+  /* Divider Tokens - Dark Mode */
+  --divider-default: var(--color-neutral-700);
+  --divider-strong: var(--color-neutral-600);
+  --divider-light: var(--color-neutral-800);
+  
+  /* Effect Tokens - Glass (Dark Mode) */
+  --effect-glass-bg: rgba(10, 13, 20, 0.5);
+
+  /* Component Overrides - Button (Dark Mode) */
+  --button-bg-secondary-default: var(--bg-secondary);
+  --button-bg-secondary-hover: var(--bg-secondary-hover);
+  --button-bg-secondary-active: var(--bg-tertiary);
+  --button-bg-secondary-disabled: var(--bg-disabled);
+  
+  --button-text-secondary-default: var(--text-primary);
+  --button-text-secondary-hover: var(--text-primary);
+  --button-text-secondary-active: var(--text-primary);
+}

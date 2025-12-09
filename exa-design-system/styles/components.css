@@ -1,0 +1,210 @@
+/* ========================================
+   COMPONENT TOKENS & STYLES
+   ======================================== */
+:root {
+  /* ----------------------------------------
+     BUTTON TOKENS
+     ---------------------------------------- */
+  
+  /* Button - Primary Variant */
+  --button-bg-primary-default: var(--bg-accent-primary);
+  --button-bg-primary-hover: var(--bg-accent-primary-hover);
+  --button-bg-primary-active: var(--bg-accent-primary-hover);
+  --button-bg-primary-disabled: var(--bg-disabled);
+  --button-bg-primary-focus: var(--bg-accent-primary);
+  
+  --button-text-primary-default: var(--text-on-brand);
+  --button-text-primary-hover: var(--text-on-brand);
+  --button-text-primary-active: var(--text-on-brand);
+  --button-text-primary-disabled: var(--text-disabled);
+  
+  --button-icon-primary-default: var(--text-on-brand);
+  --button-icon-primary-hover: var(--text-on-brand);
+  --button-icon-primary-active: var(--text-on-brand);
+  --button-icon-primary-disabled: var(--text-disabled);
+  
+  --button-border-primary-default: transparent;
+  --button-border-primary-hover: transparent;
+  --button-border-primary-focus: var(--border-accent-primary);
+  
+  --button-shadow-primary-default: var(--effect-drop-shadow-3xs);
+  --button-shadow-primary-hover: var(--effect-drop-shadow-sm);
+  --button-shadow-primary-active: var(--effect-drop-shadow-3xs);
+  --button-shadow-primary-focus: 0 0 0 0 var(--border-accent-secondary);
+  
+  /* Button - Secondary Variant */
+  --button-bg-secondary-default: var(--color-neutral-100);
+  --button-bg-secondary-hover: var(--bg-secondary-hover);
+  --button-bg-secondary-active: var(--bg-tertiary);
+  --button-bg-secondary-disabled: var(--bg-disabled);
+  
+  --button-text-secondary-default: var(--text-secondary);
+  --button-text-secondary-hover: var(--text-primary);
+  --button-text-secondary-active: var(--text-primary);
+  --button-text-secondary-disabled: var(--text-disabled);
+  
+  --button-icon-secondary-default: var(--text-secondary);
+  --button-icon-secondary-hover: var(--text-primary);
+  --button-icon-secondary-active: var(--text-primary);
+  --button-icon-secondary-disabled: var(--text-disabled);
+  
+  --button-border-secondary-default: transparent;
+  --button-border-secondary-hover: transparent;
+  --button-border-secondary-focus: var(--border-accent-primary);
+  
+  --button-shadow-secondary-focus: 0 0 0 0 var(--border-accent-secondary);
+  
+  /* Button - Tertiary Variant */
+  --button-bg-tertiary-default: transparent;
+  --button-bg-tertiary-hover: var(--bg-secondary);
+  --button-bg-tertiary-active: var(--bg-tertiary);
+  --button-bg-tertiary-disabled: transparent;
+  
+  --button-text-tertiary-default: var(--text-secondary);
+  --button-text-tertiary-hover: var(--text-primary);
+  --button-text-tertiary-active: var(--text-primary);
+  --button-text-tertiary-disabled: var(--text-disabled);
+  
+  --button-icon-tertiary-default: var(--text-secondary);
+  --button-icon-tertiary-hover: var(--text-primary);
+  --button-icon-tertiary-active: var(--text-primary);
+  --button-icon-tertiary-disabled: var(--text-disabled);
+  
+  --button-border-tertiary-default: transparent;
+  --button-border-tertiary-focus: var(--border-accent-primary);
+  
+  --button-shadow-tertiary-focus: 0 0 0 0 var(--border-accent-secondary);
+  
+  /* Button - Danger Variant */
+  --button-bg-danger-default: var(--bg-error-primary);
+  --button-bg-danger-hover: var(--bg-error-primary-hover);
+  --button-bg-danger-active: var(--bg-error-primary-hover);
+  --button-bg-danger-disabled: var(--bg-disabled);
+  
+  --button-text-danger-default: var(--text-on-brand);
+  --button-text-danger-hover: var(--text-on-brand);
+  --button-text-danger-active: var(--text-on-brand);
+  --button-text-danger-disabled: var(--text-disabled);
+  
+  --button-icon-danger-default: var(--text-on-brand);
+  --button-icon-danger-hover: var(--text-on-brand);
+  --button-icon-danger-active: var(--text-on-brand);
+  --button-icon-danger-disabled: var(--text-disabled);
+  
+  --button-border-danger-default: transparent;
+  --button-border-danger-focus: var(--border-error-primary);
+  
+  --button-shadow-danger-default: var(--effect-drop-shadow-3xs);
+  --button-shadow-danger-hover: var(--effect-drop-shadow-sm);
+  --button-shadow-danger-active: var(--effect-drop-shadow-3xs);
+  --button-shadow-danger-focus: 0 0 0 0 var(--border-error-secondary);
+  
+  /* Button - Size Specific */
+  --button-padding-sm: var(--spacing-3) var(--spacing-6);
+  --button-padding-md: var(--spacing-4) var(--spacing-8);
+  --button-padding-lg: var(--spacing-5) var(--spacing-10);
+  
+  --button-height-sm: var(--sizing-11);
+  --button-height-md: var(--sizing-13);
+  --button-height-lg: var(--sizing-15);
+  
+  --button-icon-size-sm: 14px;
+  --button-icon-size-md: 16px;
+  --button-icon-size-lg: 18px;
+  
+  --button-font-sm: var(--typography-body-xs-medium);
+  --button-font-md: var(--typography-body-sm-medium);
+  --button-font-lg: var(--typography-body-md-medium);
+  
+  --button-gap: var(--spacing-4);
+  --button-radius: var(--border-radius-full);
+  
+  /* ----------------------------------------
+     INPUT TOKENS
+     ---------------------------------------- */
+  
+  /* Input - Default State */
+  --input-bg-default-default: var(--input-bg);
+  --input-bg-default-hover: var(--input-bg-hover);
+  --input-bg-default-focus: var(--input-bg-focus);
+  --input-bg-default-disabled: var(--input-bg-disabled);
+  --input-bg-default-readonly: var(--input-bg-readonly);
+  
+  --input-border-default-default: var(--input-border);
+  --input-border-default-hover: var(--input-border-hover);
+  --input-border-default-focus: var(--input-border-focus);
+  --input-border-default-error: var(--input-border-error);
+  --input-border-default-success: var(--input-border-success);
+  --input-border-default-disabled: var(--input-border-disabled);
+  
+  --input-text-default-default: var(--input-text);
+  --input-text-default-placeholder: var(--input-text-placeholder);
+  --input-text-default-disabled: var(--input-text-disabled);
+  
+  --input-shadow-default-focus: 0 0 0 0 var(--input-focus-ring);
+  --input-shadow-error-focus: 0 0 0 0 var(--input-focus-ring-error);
+  --input-shadow-success-focus: 0 0 0 0 var(--input-focus-ring-success);
+  
+  --input-icon-default-default: var(--text-tertiary);
+  --input-label-default-default: var(--text-tertiary);
+  --input-helper-default-default: var(--text-tertiary);
+  
+  --input-label-default-focus: var(--text-accent-primary);
+  
+  --input-icon-default-error: var(--text-error-primary);
+  --input-label-default-error: var(--text-error-primary);
+  --input-helper-default-error: var(--text-error-primary);
+  
+  --input-icon-default-success: var(--text-success-primary);
+  --input-label-default-success: var(--text-success-primary);
+  --input-helper-default-success: var(--text-success-primary);
+  
+  --input-icon-default-disabled: var(--text-disabled);
+  --input-label-default-disabled: var(--text-disabled);
+  
+  /* Input - Size Specific */
+  --input-padding-sm: var(--spacing-3) var(--spacing-6);
+  --input-padding-md: var(--spacing-4) var(--spacing-7);
+  --input-padding-lg: var(--spacing-5) var(--spacing-8);
+  
+  /* Linked to Sizing tokens for consistency */
+  --input-height-sm: var(--sizing-11);
+  --input-height-md: var(--sizing-13);
+  --input-height-lg: var(--sizing-15);
+  
+  --input-font-sm: var(--typography-body-xs-regular);
+  --input-font-md: var(--typography-body-sm-regular);
+  --input-font-lg: var(--typography-body-md-regular);
+  
+  --input-radius: var(--border-radius-lg);
+  
+  /* ----------------------------------------
+     CARD TOKENS
+     ---------------------------------------- */
+  
+  /* Card - Elevated Variant */
+  --card-bg-elevated-default: var(--surface-elevated);
+  --card-bg-elevated-hover: var(--surface-elevated-hover);
+  --card-bg-elevated-active: var(--surface-active);
+  
+  --card-border-elevated-default: var(--border-primary);
+  --card-border-elevated-hover: var(--border-secondary);
+  
+  --card-shadow-elevated-default: var(--shadow-card);
+  --card-shadow-elevated-hover: var(--shadow-card-hover);
+  
+  /* Card - Flat Variant */
+  --card-bg-flat-default: var(--surface-secondary);
+  --card-bg-flat-hover: var(--surface-hover);
+  
+  --card-border-flat-default: var(--border-primary);
+  
+  /* Card - Size Specific */
+  --card-padding-sm: var(--spacing-5);
+  --card-padding-md: var(--spacing-6);
+  --card-padding-lg: var(--spacing-8);
+  
+  --card-radius-sm: var(--border-radius-md);
+  --card-radius-md: var(--border-radius-lg);
+  --card-radius-lg: var(--border-radius-xl);
+}
