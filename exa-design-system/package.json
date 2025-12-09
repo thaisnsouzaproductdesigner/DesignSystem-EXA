@@ -1,0 +1,72 @@
+{
+  "name": "@exa/design-system",
+  "version": "1.0.0",
+  "description": "EXA Design System - Sistema de Design React + TypeScript com tokens semânticos, componentes acessíveis e suporte completo a Dark Mode",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "author": "EXA Team",
+  "license": "MIT",
+  "keywords": [
+    "design-system",
+    "react",
+    "typescript",
+    "components",
+    "tokens",
+    "dark-mode",
+    "accessibility",
+    "wcag",
+    "exa"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./components": {
+      "import": "./dist/components/index.mjs",
+      "require": "./dist/components/index.js",
+      "types": "./dist/components/index.d.ts"
+    },
+    "./contexts": {
+      "import": "./dist/contexts/index.mjs",
+      "require": "./dist/contexts/index.js",
+      "types": "./dist/contexts/index.d.ts"
+    },
+    "./styles.css": "./styles.css",
+    "./styles/*": "./styles/*"
+  },
+  "files": [
+    "dist",
+    "styles",
+    "README.md",
+    "package.json"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "lucide-react": "^0.263.0"
+  },
+  "dependencies": {
+    "clsx": "^2.0.0",
+    "tailwind-merge": "^2.0.0"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.0",
+    "typescript": "^5.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/exa/design-system"
+  },
+  "bugs": {
+    "url": "https://github.com/exa/design-system/issues"
+  },
+  "homepage": "https://github.com/exa/design-system#readme"
+}
