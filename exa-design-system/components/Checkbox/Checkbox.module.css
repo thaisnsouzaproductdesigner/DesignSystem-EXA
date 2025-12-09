@@ -1,0 +1,178 @@
+/* Checkbox.module.css */
+
+/* Checkbox Wrapper */
+.root {
+  display: inline-flex;
+  align-items: flex-start;
+  position: relative;
+}
+
+.rootStandalone {
+  display: inline-flex;
+}
+
+.rootStandalone .label {
+  min-height: auto;
+  padding: 0;
+}
+
+/* Label */
+.label {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-3); /* 8px was var(--spacing-4) in legacy, but gap here is often 8px. Wait, code says var(--spacing-4). */
+  cursor: pointer;
+  user-select: none;
+  
+  /* Touch target */
+  min-height: var(--spacing-13); /* 44px */
+  padding: var(--spacing-5) 0; /* 12px */
+}
+
+/* Label Text */
+.labelText {
+  font: var(--typography-body-sm-regular);
+  color: var(--text-primary);
+  line-height: 1.5;
+}
+
+/* Checkbox Container */
+.container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Native Input */
+.input {
+  position: absolute;
+  width: var(--spacing-13); /* 44px */
+  height: var(--spacing-13);
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 1;
+}
+
+/* Checkbox Box (Visual) */
+.box {
+  /* Size - 20px (spacing-7) */
+  width: var(--spacing-7);
+  height: var(--spacing-7);
+  
+  /* Shape */
+  border-radius: var(--border-radius-sm);
+  
+  /* Border */
+  border: 2px solid var(--border-primary);
+  
+  /* Background */
+  background-color: transparent;
+  
+  /* Layout */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  /* Transition */
+  transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  
+  /* Pointer events off */
+  pointer-events: none;
+}
+
+/* Checkbox Icon */
+.icon {
+  color: var(--text-on-brand);
+  opacity: 0;
+  transform: scale(0);
+  transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* STATES */
+
+/* Checked */
+.checked .box {
+  background-color: var(--bg-accent-primary);
+  border-color: var(--bg-accent-primary);
+}
+
+.checked .icon {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Indeterminate */
+.indeterminate .box {
+  background-color: var(--bg-accent-primary);
+  border-color: var(--bg-accent-primary);
+}
+
+.indeterminate .icon {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Hover */
+.input:hover:not(:disabled) ~ .box {
+  border-color: var(--border-secondary);
+}
+
+.checked .input:hover:not(:disabled) ~ .box,
+.indeterminate .input:hover:not(:disabled) ~ .box {
+  background-color: var(--bg-accent-primary-hover);
+  border-color: var(--bg-accent-primary-hover);
+}
+
+/* Focus */
+.input:focus-visible ~ .box {
+  box-shadow: 0 0 0 3px var(--border-accent-secondary);
+  outline: 2px solid transparent;
+}
+
+/* Error */
+.error .box {
+  border-color: var(--border-error-primary);
+}
+
+.error.checked .box,
+.error.indeterminate .box {
+  background-color: var(--bg-error-primary);
+  border-color: var(--bg-error-primary);
+}
+
+.rootError .labelText {
+  color: var(--text-error-primary);
+}
+
+/* Disabled */
+.disabled .box {
+  background-color: var(--bg-disabled);
+  border-color: var(--border-disabled);
+  cursor: not-allowed;
+}
+
+.disabled.checked .box,
+.disabled.indeterminate .box {
+  background-color: var(--bg-disabled);
+  border-color: var(--border-disabled);
+}
+
+.disabled .icon {
+  color: var(--icon-disabled);
+}
+
+.rootDisabled .label {
+  cursor: not-allowed;
+  opacity: var(--opacity-60);
+}
+
+.rootDisabled .labelText {
+  color: var(--text-disabled);
+}
+
+.input:disabled {
+  cursor: not-allowed;
+}

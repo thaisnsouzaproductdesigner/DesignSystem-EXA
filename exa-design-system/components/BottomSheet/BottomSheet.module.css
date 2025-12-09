@@ -1,0 +1,165 @@
+/* BottomSheet.module.css */
+
+/* Overlay replaced by Backdrop component */
+/* We need to override some Backdrop styles to positioning the sheet at the bottom */
+.backdropOverride {
+  align-items: flex-end !important; /* Override global .exa-backdrop align-items: flex-start */
+  transition: opacity 0.3s ease;
+}
+
+.backdropInline {
+  position: absolute !important;
+  z-index: 10;
+  height: 100%;
+  width: 100%;
+}
+
+/* Sheet Container */
+.sheet {
+  background-color: var(--bg-primary); /* Token: Neutral 100 (Light) */
+  border-radius: var(--border-radius-2xl); /* Token: 20px - All corners */
+  box-shadow: var(--effect-drop-shadow-xl); /* Token: Shadow XL */
+  overflow: hidden; /* Ensures content respects border radius */
+  
+  /* Sizing & Spacing */
+  margin: var(--spacing-4); /* Floating margin */
+  width: calc(100% - (var(--spacing-4) * 2)); /* Full width minus margins */
+  max-width: 640px; /* Max width for desktop sanity */
+  max-height: calc(90vh - var(--spacing-4)); /* Account for margin */
+  
+  display: flex;
+  flex-direction: column;
+  transform: translateY(calc(100% + var(--spacing-4))); /* Start below the screen including margin */
+  transition: transform 0.3s cubic-bezier(0.32, 0.72, 0, 1); /* iOS-like ease */
+  position: relative;
+  z-index: 51;
+  padding-bottom: env(safe-area-inset-bottom); /* Safe Area Support */
+}
+
+.sheet.open {
+  transform: translateY(0);
+}
+
+/* Drag Handle Area */
+.handleContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: var(--spacing-3); /* 4px */
+  padding-bottom: var(--spacing-3); /* 4px */
+  cursor: grab;
+  flex-shrink: 0;
+}
+
+.handle {
+  width: 32px;
+  height: 4px;
+  background-color: var(--bg-tertiary); /* Token: Neutral 300 */
+  border-radius: var(--border-radius-full);
+}
+
+/* Header (Sticky) */
+.header {
+  padding: var(--spacing-6) var(--spacing-6);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border-primary); /* Optional: separation */
+  flex-shrink: 0;
+  position: sticky;
+  top: 0;
+  background-color: var(--bg-primary);
+  z-index: 10;
+}
+
+.titleContainer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1);
+}
+
+.title {
+  color: var(--text-primary);
+  font-weight: var(--font-weight-semi-bold);
+  font-size: var(--font-size-lg);
+  margin: 0;
+}
+
+.subtitle {
+  color: var(--text-secondary);
+  font-size: var(--font-size-sm);
+  margin: 0;
+}
+
+.closeButton {
+  background: transparent;
+  border: none;
+  color: var(--icon-secondary);
+  cursor: pointer;
+  padding: var(--spacing-2);
+  border-radius: var(--border-radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+}
+
+.closeButton:hover {
+  background-color: var(--bg-secondary);
+  color: var(--icon-primary);
+}
+
+/* Content (Scrollable) */
+.content {
+  padding: var(--spacing-6);
+  overflow-y: auto;
+  flex-grow: 1;
+  /* Smooth scrolling */
+  -webkit-overflow-scrolling: touch;
+  
+  /* Firefox Scrollbar */
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb) transparent;
+}
+
+/* Custom Scrollbar (Webkit) */
+.content::-webkit-scrollbar {
+  width: 6px; /* Subtle width */
+  height: 6px;
+}
+
+.content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.content::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb); /* Token */
+  border-radius: var(--border-radius-full);
+}
+
+.content::-webkit-scrollbar-thumb:hover {
+  background-color: var(--scrollbar-thumb-hover); /* Token */
+}
+
+/* Footer (Sticky) */
+.footer {
+  padding: var(--spacing-4) var(--spacing-6);
+  border-top: 1px solid var(--border-primary);
+  background-color: var(--bg-primary);
+  flex-shrink: 0;
+  display: flex;
+  gap: var(--spacing-3);
+  position: sticky;
+  bottom: 0;
+  z-index: 10;
+}
+
+/* Action Sheet specific adjustments */
+.sheet--action .content {
+  padding: 0;
+}
+
+.sheet--action .header {
+  border-bottom: none;
+  padding-bottom: var(--spacing-2);
+}

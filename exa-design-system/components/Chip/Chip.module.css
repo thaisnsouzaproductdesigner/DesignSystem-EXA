@@ -1,0 +1,101 @@
+.root {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-2); /* 6px is approx spacing-2? Usually spacing-1=2, spacing-2=4, spacing-3=8? If 6px is not standard, keep 6px or use calc */
+  padding: var(--spacing-2) var(--spacing-5);
+  border-radius: var(--border-radius-full);
+  border: 1px solid var(--border-primary);
+  background-color: transparent;
+  color: var(--text-secondary);
+  font: var(--typography-body-sm-medium);
+  line-height: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+  position: relative;
+  white-space: nowrap;
+  outline: none;
+}
+
+/* Ensure minimum touch target of 44px */
+.root::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: var(--sizing-13); /* 44px */
+  min-height: var(--sizing-13);
+}
+
+/* Variants */
+.small {
+  height: var(--sizing-10);
+  padding: 6px var(--spacing-5);
+  font: var(--typography-body-sm-medium);
+}
+
+.large {
+  height: var(--sizing-12);
+  padding: 10px var(--spacing-6);
+  font: var(--typography-body-md-medium);
+}
+
+/* Icon */
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: currentColor;
+}
+
+.iconLeft {
+  margin-left: -2px;
+}
+
+.iconRight {
+  margin-right: -2px;
+}
+
+/* Label */
+.label {
+  display: inline-block;
+  line-height: 1;
+}
+
+/* Hover */
+.root:hover:not(.disabled):not(.active) {
+  background-color: var(--bg-secondary);
+  border-color: var(--border-secondary);
+}
+
+/* Active */
+.active {
+  background-color: var(--surface-selected);
+  border-color: var(--border-accent-primary);
+  color: var(--text-accent-primary);
+}
+
+.active:hover:not(.disabled) {
+  background-color: var(--surface-selected-hover);
+  border-color: var(--border-accent-primary);
+}
+
+/* Focus */
+.root:focus-visible:not(.disabled) {
+  outline: 2px solid var(--border-accent-primary);
+  outline-offset: 2px;
+}
+
+/* Disabled */
+.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.disabled .icon {
+  opacity: 0.5;
+}

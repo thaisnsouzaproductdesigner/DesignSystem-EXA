@@ -1,0 +1,138 @@
+/* Alert.module.css */
+
+.alert {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-5);
+  /* padding handled by variant */
+  border-radius: var(--border-radius-md);
+  border: 1px solid transparent; /* Mantendo borda transparente por padrão ou pode ser var(--border-primary) se quiser borda sutil */
+  width: 100%;
+  font-family: var(--font-family-inter);
+  box-sizing: border-box;
+  color: var(--text-primary);
+  background-color: var(--bg-primary); /* Fundo unificado (cinza claro) */
+}
+
+/* Variants - Agora controlam apenas o ícone */
+.success .icon {
+  background-color: var(--icon-success-primary);
+  color: var(--text-on-brand);
+}
+
+.error .icon {
+  background-color: var(--icon-error-primary);
+  color: var(--text-on-brand);
+}
+
+.warning .icon {
+  background-color: var(--icon-warning-primary);
+  color: var(--text-primary);
+}
+
+.info .icon {
+  background-color: var(--icon-info-primary);
+  color: var(--text-on-brand);
+}
+
+/* Content */
+.content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: var(--spacing-3);
+}
+
+.title {
+  font: var(--typography-body-sm-bold);
+  margin: 0;
+}
+
+.description {
+  font: var(--typography-body-sm-regular);
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+.icon {
+  flex-shrink: 0;
+  width: var(--spacing-8); /* Aumentado para 24px para acomodar o círculo */
+  height: var(--spacing-8);
+  margin-top: var(--spacing-2);
+  border-radius: var(--border-radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Ajuste fino: se o ícone for 20px (padrão Lucide no Alert.tsx), ele ficará centralizado no círculo de 24px */
+
+.actions {
+  display: flex;
+  gap: var(--spacing-4);
+  align-items: flex-start;
+  margin-left: auto;
+}
+
+.closeButton {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  color: inherit;
+  opacity: var(--opacity-60);
+  transition: opacity 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: var(--spacing-2);
+}
+
+.closeButton:hover {
+  opacity: var(--opacity-100);
+}
+
+.clickable {
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.clickable:hover {
+  background-color: var(--bg-secondary-hover);
+}
+
+.contentAction {
+  display: flex;
+  align-items: center;
+}
+
+.linkAction {
+  background: none;
+  border: none;
+  padding: 0;
+  font: var(--typography-body-sm-bold, 500 14px/1.5 'Inter', sans-serif);
+  color: var(--text-primary);
+  text-decoration: underline;
+  cursor: pointer;
+  text-align: left;
+  align-self: flex-start;
+}
+
+.chevron {
+  color: var(--text-secondary);
+  flex-shrink: 0;
+  margin-top: var(--spacing-2);
+}
+
+/* Padding Variants */
+.paddingSm {
+  padding: var(--spacing-6); /* 16px */
+}
+
+.paddingMd {
+  padding: var(--spacing-8); /* 24px */
+}
+
+.paddingLg {
+  padding: var(--spacing-10); /* 32px */
+}

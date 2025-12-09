@@ -1,0 +1,55 @@
+/* Backdrop Component - EXA Design System */
+
+.backdrop {
+  /* Positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  
+  /* Display */
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  
+  /* Animation */
+  animation: backdrop-fade-in 200ms ease-in-out;
+  
+  /* Interaction */
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  
+  /* Default z-index handled by inline style or prop */
+}
+
+/* Respect prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .backdrop {
+    animation: none;
+  }
+}
+
+/* Variants */
+
+/* Glass - EXA Default (Glassmorphism) */
+.glass {
+  background-color: rgba(10, 13, 20, 0.5); /* #0A0D14 @ 50% */
+  backdrop-filter: blur(var(--blur-md, 8px)); /* Fallback added */
+  -webkit-backdrop-filter: blur(var(--blur-md, 8px));
+}
+
+/* Solid - No Blur (Better Performance) */
+.solid {
+  background-color: rgba(10, 13, 20, 0.6); /* #0A0D14 @ 60% */
+}
+
+/* Animations */
+@keyframes backdrop-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

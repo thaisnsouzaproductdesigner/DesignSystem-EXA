@@ -1,0 +1,186 @@
+/* Badge.module.css */
+
+/* Base Badge Styles */
+.badge {
+  /* Layout */
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  
+  /* Typography */
+  font: var(--typography-body-xs-medium);
+  text-transform: capitalize;
+  white-space: nowrap;
+  
+  /* Spacing */
+  padding: var(--spacing-3) var(--spacing-4);
+  
+  /* Shape - EXA Pill Shape */
+  border-radius: var(--border-radius-full);
+  
+  /* Transition */
+  transition: all 150ms ease-in-out;
+  
+  /* Non-interactive by default */
+  cursor: default;
+}
+
+/* Icon inside badge */
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 12px;
+  height: 12px;
+  flex-shrink: 0;
+}
+
+.text {
+  display: inline-block;
+}
+
+/* Interactive badges */
+.interactive {
+  cursor: pointer;
+  user-select: none;
+}
+
+.interactive:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--effect-drop-shadow-2xs-alt);
+}
+
+.interactive:active {
+  transform: translateY(0);
+}
+
+.interactive:focus-visible {
+  outline: 2px solid var(--input-focus-ring);
+  outline-offset: 2px;
+}
+
+/* ========================================
+   BADGE VARIANTS (Hierarchy)
+   ======================================== */
+
+/* === SUBTLE VARIANT (Default - 90% of cases) === */
+
+/* Brand - Blue */
+.subtle.brand {
+  background-color: var(--bg-info-secondary);
+  color: var(--text-accent-secondary);
+}
+
+/* Success - Green */
+.subtle.success {
+  background-color: var(--bg-success-secondary);
+  color: var(--text-success-secondary);
+}
+
+/* Warning - Yellow */
+.subtle.warning {
+  background-color: var(--bg-warning-secondary);
+  color: var(--text-warning-secondary);
+}
+
+/* Error - Red */
+.subtle.error {
+  background-color: var(--bg-error-secondary);
+  color: var(--text-error-secondary);
+}
+
+/* Neutral - Gray */
+.subtle.neutral {
+  background-color: var(--bg-secondary);
+  color: var(--text-secondary);
+}
+
+/* === SOLID VARIANT (High Emphasis) === */
+
+/* Brand - Blue */
+.solid.brand {
+  background-color: var(--bg-accent-primary);
+  color: var(--text-on-brand);
+}
+
+/* Success - Green */
+.solid.success {
+  background-color: var(--bg-success-primary);
+  color: var(--text-on-brand);
+}
+
+/* Warning - Yellow */
+.solid.warning {
+  background-color: var(--bg-warning-primary);
+  color: var(--text-primary);
+}
+
+/* Error - Red */
+.solid.error {
+  background-color: var(--bg-error-primary);
+  color: var(--text-on-brand);
+}
+
+/* Neutral - Gray */
+.solid.neutral {
+  background-color: var(--bg-black-solid);
+  color: var(--text-on-brand);
+}
+
+/* === OUTLINE VARIANT (Low Emphasis) === */
+
+/* Brand - Blue */
+.outline.brand {
+  background-color: transparent;
+  color: var(--text-accent-primary);
+  border: 1px solid var(--border-accent-secondary);
+}
+
+/* Success - Green */
+.outline.success {
+  background-color: transparent;
+  color: var(--text-success-primary);
+  border: 1px solid var(--border-success-secondary);
+}
+
+/* Warning - Yellow */
+.outline.warning {
+  background-color: transparent;
+  color: var(--text-warning-primary);
+  border: 1px solid var(--border-warning-secondary);
+}
+
+/* Error - Red */
+.outline.error {
+  background-color: transparent;
+  color: var(--text-error-primary);
+  border: 1px solid var(--border-error-secondary);
+}
+
+/* Neutral - Gray */
+.outline.neutral {
+  background-color: transparent;
+  color: var(--text-secondary);
+  border: 1px solid var(--border-secondary);
+}
+
+/* ========================================
+   NUMERIC BADGE (Notification Counts)
+   ======================================== */
+
+.numeric {
+  min-width: 20px;
+  height: 20px;
+  padding: var(--spacing-2) 6px;
+  justify-content: center;
+  font: var(--typography-body-xs-bold);
+}
+
+/* Dot Style - No text, just a circle */
+.dot {
+  width: var(--spacing-4);
+  height: var(--spacing-4);
+  min-width: var(--spacing-4);
+  padding: 0;
+  border-radius: 50%;
+}
